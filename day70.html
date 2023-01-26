@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: "Open Sans", Helvetica, sans-serif;
+        font-weight: 400;
+      }
+      .align-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      body {
+        min-height: 100vh;
+        background-color: #fff;
+      }
+      .container {
+        font-size: 1.6rem;
+        width: 25rem;
+        height: 25rem;
+        border-radius: 2px;
+        background: #512626;
+        box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        position: relative;
+        flex-direction: column;
+      }
+      .line {
+        width: 100%;
+        min-height: 50%;
+      }
+      .card {
+        width: 50%;
+        height: 100%;
+        background: #e27474;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      .card:hover {
+        transform: scale(0.93);
+        box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+      }
+      .day-week {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+      }
+      .day {
+        font-weight: 700;
+        font-size: 4rem;
+      }
+    </style>
+  </head>
+  <body class="align-center">
+    <main class="container align-center">
+      <div class="align-center line">
+        <div class="align-center card">
+          <p class="day-week">Friday</p>
+          <p class="day">15</p>
+        </div>
+        <div class="align-center card">
+          <p class="day-week">Saturday</p>
+          <p class="day">16</p>
+        </div>
+      </div>
+      <div class="align-center line">
+        <div class="align-center card">
+          <p class="day-week">Sunday</p>
+          <p class="day">17</p>
+        </div>
+        <div class="align-center card">
+          <p class="day-week">Monday</p>
+          <p class="day">18</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

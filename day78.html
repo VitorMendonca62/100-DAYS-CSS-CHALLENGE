@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: "Open Sans", Helvetica, sans-serif;
+        font-weight: 400;
+      }
+      .align-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      body {
+        min-height: 100vh;
+        background-color: #fff;
+      }
+      .container {
+        font-size: 1.6rem;
+        width: 25rem;
+        height: 25rem;
+        border-radius: 2px;
+        background: #3498db;
+        box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        padding: 1.5rem;
+        position: relative;
+        flex-direction: column;
+      }
+      .buttons {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%;
+      }
+      .buttons > div {
+        padding: 1.5rem;
+        color: #000;
+        font-size: 1rem;
+        width: 55%;
+        background-color: #fff;
+        text-align: center;
+        transition: 0.7s;
+        cursor: pointer;
+      }
+      .buttons > div:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 2px 10px 0px rgb(0 0 0);
+      }
+    </style>
+  </head>
+  <body class="align-center">
+    <main class="container align-center">
+      <div class="buttons align-center">
+        <div>Hover Me</div>
+        <div>Hover Me</div>
+        <div>Hover Me</div>
+      </div>
+    </main>
+  </body>
+</html>
