@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 600;
+}
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  min-height: 100vh;
+  background-color: #fff;
+}
+.container {
+  font-size: 1.6rem;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 2px;
+  background: #1abc9c;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+}
+input {
+  display: none;
+}
+label {
+  margin-right: 0.5rem;
+  position: relative;
+}
+#label1::after {
+  content: "1";
+}
+#label2::after {
+  content: "2";
+}
+#label3::after {
+  content: "3";
+}
+#label4::after {
+  content: "4";
+}
+label::after {
+  text-align: center;
+  display: inline-block;
+  width: 2.3rem;
+  height: 2rem;
+  padding: 0.6rem 0.2rem 0.2rem 0.2rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  position: relative;
+}
+label:hover::after {
+  background: #16a085;
+  transition: all 0.3s ease-in-out;
+}
+label:before {
+  content: "";
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+  background-color: #fff;
+  top: -6px;
+  left: 0;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+input:checked + label::before {
+  opacity: 1;
+  transform: scale(1);
+}
+input:checked + label::after {
+  color: #1abc9c;
+}
+input:checked + label:hover::after {
+  background: white;
+  transition: all 0.8s ease-in-out;
+}

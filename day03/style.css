@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", "Courier", sans-serif;
+  color: #fff;
+}
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  min-height: 100vh;
+  background-color: #fff;
+}
+.container {
+  width: 25rem;
+  height: 25rem;
+  flex-direction: column;
+  border-radius: 2px;
+  background: #272c34;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.circle {
+  position: relative;
+  width: 11.25rem;
+  height: 11.25rem;
+  background: #f0de75;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: darken-circle 4s infinite;
+  transition: 0.3s;
+}
+.sky {
+  position: absolute;
+  background: #7ddffc;
+  height: 7.5rem;
+  width: 100%;
+}
+.sun {
+  position: absolute;
+  top: 2.5%;
+  left: 40%;
+  background: #ffef00;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transform-origin: 50% 400%;
+  animation: sunset 4s infinite;
+}
+.left-piramide {
+  position: absolute;
+  top: 4rem;
+  width: 7.5rem;
+  height: 3.5rem;
+  background: #f4f4f4;
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  left: calc(50% - 3.75rem);
+  animation: pyramide-shading 4s infinite;
+}
+.right-piramide {
+  position: absolute;
+  top: 4rem;
+  width: 3.75rem;
+  height: 3.5rem;
+  background: #dddada;
+  clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
+  left: calc(50%);
+  animation: pyramide-shading 4s infinite reverse;
+}
+.shadow {
+  position: absolute;
+  top: 7.5rem;
+  left: -80px;
+  height: 1.5rem;
+  width: 22.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  transform-origin: 50% 0%;
+  clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+  z-index: 2;
+  animation: shadow-on-the-floor 4s infinite;
+}
+.sand {
+  position: absolute;
+  width: 100%;
+  height: 4.5rem;
+  top: 7.5rem;
+  background: #f0de75;
+}
+.shadow {
+  transform: rotate(2deg);
+}
+
+@keyframes sunset {
+  0% {
+    transform: rotate(-80deg);
+  }
+  30% {
+    transform: rotate(-27deg);
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+@keyframes darken-circle {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@keyframes shadow-on-the-floor {
+  0% {
+    transform: scaleY(0);
+    clip-path: polygon(115px 0%, 231px 0%, 100% 100%);
+  }
+
+  30% {
+    transform: scaleY(1);
+    clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+  }
+
+  55% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(0);
+    clip-path: polygon(115px 0%, 231px 0%, 0% 100%);
+  }
+}
+@keyframes pyramide-shading {
+  30% {
+    background: #f4f4f4;
+  }
+
+  70% {
+    background: #dddada;
+  }
+}
